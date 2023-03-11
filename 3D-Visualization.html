@@ -1,0 +1,54 @@
+<!-- Copyright (c) 2023, Gonçalo Lopes -->
+<!-- Contact: galopes@dei.uc.pt -->
+<!-- All rights reserved. -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>3D Visualizer</title>
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  </head>
+  <body>
+    <h1>3D Visualizer</h1>
+    <div class="container">
+      <div class="controls">
+        <div class="scroll-views">
+          <div class="scroll-view-container">
+            <div class="scroll-view-header">Reference Points</div>
+            <div class="scroll-view" id="ref_points">
+              <!-- content for first scroll view -->
+            </div>
+          </div>        
+          <div class="scroll-view-container">
+            <div class="scroll-view-header">Solution Points</div>
+            <div class="scroll-view" id="sol_points">
+              <!-- content for first scroll view -->
+            </div>
+          </div>        
+        </div>
+        <div>
+          <center><b>Solution Point</b></center>
+          <br>
+          x: <input type="number" id="size_x" value="0" min="0" max="100">
+          y: <input type="number" id="size_y" value="0" min="0" max="100">
+          z: <input type="number" id="size_z" value="0" min="0" max="100">
+        </div>
+        <button id="update_button">Add solution</button>
+        <button id="remove_button">Remove previous solution</button>
+      </div>
+      <div class="plot">
+        <div id="plotly_3d_cube"></div>
+      </div>
+    </div>
+    <script src="script/Point.js"></script>
+    <script src="script/State.js"></script>
+    <script src="script/App.js"></script>
+    <script src="script/Utils.js"></script>
+    <script src="script/Plotly.js"></script>
+    <div class="copyright">
+      Copyright (c) 2023, Gonçalo Lopes. All rights reserved.
+    </div>
+  </body>
+</html>
